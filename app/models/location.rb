@@ -44,7 +44,7 @@ class Location
     }
   end
 
-
+  # create new location
   def self.create(opts)
     results = DB.exec(
       <<-SQL
@@ -62,5 +62,12 @@ class Location
       "phone" => result["phone"]
     }
   end
+
+  # delete one (by id)
+  def self.delete(id)
+    results = DB.exec("DELETE FROM locations WHERE id=#{id};")
+    return {"deleted" => true}
+  end
+
 
 end
