@@ -44,4 +44,23 @@ class Location
     }
   end
 
+
+  def self.create(opts)
+    results = DB.exec(
+      <<-SQL
+        INSERT INTO locations (company_name, address, image, phone)
+        VALUES ('#{opts["company_name"]}', '#{opts["address"]}', '#{opts["image"]}', '#{opts["phone"]}')
+        RETURNING id, company_name, address, image, phone;
+      SQL
+    )
+    result = results.first
+    return {
+      "id" => result["id"].to_i,
+      "company_name" => result["company_name"],
+      "address" => result["address"],
+      "image" => result["image"],
+      "phone" => result["phone"]
+    }
+  end
+
 end
