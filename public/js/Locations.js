@@ -3,7 +3,7 @@ class Locations extends React.Component {
     return (
       <div className='locations'>
         <h2> Places That Accept EBT </h2>
-
+        <LocationList />
       </div>
     )
   }
@@ -11,6 +11,6 @@ class Locations extends React.Component {
 
 
 ReactDOM.render(
-    <Locations />
+    <Locations />,
   document.querySelector('main')
 )
