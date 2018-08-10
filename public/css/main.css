@@ -13,8 +13,14 @@ body, html {
   height: 100%;
 }
 .header {
+  display: flex;
   background-image: url(http://writink.com/wp-content/uploads/2016/08/Fresh-Food.jpg);
   background-position: center;
+}
+.logo {
+  width: 200px;
+  height:200px;
+  margin: 20px 35px;
 }
 h1 {
   padding: 4em;
@@ -22,16 +28,26 @@ h1 {
   color: white;
 }
 h2 {
+  color: #3a3a3a;
   text-align: center;
-}
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
 
+}
+.welcome {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #ead33a;
+}
 
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #e5cb20;
+  background: #5e424c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,8 +60,8 @@ h2 {
 }
 .devs a {
   text-decoration: none;
-  color: #3a3a3a;
+  color: white;
 }
 .devs a:hover{
-  color: black;
+  color: #efecda;
 }
