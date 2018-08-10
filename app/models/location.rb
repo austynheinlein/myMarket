@@ -69,5 +69,24 @@ class Location
     return {"deleted" => true}
   end
 
+  # update location (by id)
+  def self.update(id, opts)
+    results = DB.exec(
+      <<-SQL
+        UPDATE locations
+        SET company_name='#{opts["company_name"]}', address='#{opts["address"]}', image='#{opts["image"]}', phone='#{opts["phone"]}'
+        WHERE id=#{id}
+        RETURNING id, company_name, address, image, phone;
+      SQL
+    )
+    result = results.first
+    return {
+      "id" => result["id"].to_i,
+      "company_name" => result["company_name"],
+      "address" => result["address"],
+      "image" => result["image"],
+      "phone" => result["phone"]
+    }
+  end
 
 end
