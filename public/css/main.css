@@ -30,18 +30,26 @@ h1 {
   color: white;
 }
 h2 {
-  color: #3a3a3a;
+  color: white;
   text-align: center;
   padding: 10px;
+  margin: 20px;
   align-items: center;
   justify-content: center;
-
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  color: #cfcfd1;
 }
 .welcome {
   align-items: center;
   justify-content: center;
   display: flex;
-  background-color: #ead33a;
+  background-color:#6a8742;
 }
 
 .footer {
@@ -49,21 +57,20 @@ h2 {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #5e424c;
+  background: #f4d611;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.devs {
+.footnotes {
   display: flex;
   flex-direction: column;
-  color: white;
   padding: 20px 40px;
 }
-.devs a {
+.footnotes a {
   text-decoration: none;
-  color: white;
+  color: #3a3a3a;
 }
-.devs a:hover{
-  color: #efecda;
+.footnotes a:hover{
+  color: #798e5c;
 }
