@@ -31,5 +31,17 @@ class Location
   end
 
 
+  # get one (by id)
+  def self.find(id)
+    results = DB.exec("SELECT * FROM locations WHERE id=#{id};")
+    result = results.first
+    return {
+      "id" => result["id"].to_i,
+      "company_name" => result["company_name"],
+      "address" => result["address"],
+      "image" => result["image"],
+      "phone" => result["phone"]
+    }
+  end
 
 end

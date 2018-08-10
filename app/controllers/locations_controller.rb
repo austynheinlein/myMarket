@@ -6,5 +6,11 @@ class LocationsController < ApplicationController
     render json: Location.all
   end
 
+  # get one (by id)
+  def show
+    render json: Location.find(params["id"])
+  end
+
+
 
 end
