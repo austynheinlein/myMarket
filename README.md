@@ -3,16 +3,16 @@
 ## About the App 
  myMarket is a place where users can keep track of local businesses that accept EBT. A user can add, edit, delete, and list any location they would like to the directory. 
  
- ### Technologies Used
+ #### Technologies Used
  This app was created using: 
  - Ruby on Rails 
  - PostgresSQL database
  - React front-end framework
  - Heroku deployment
  
- ### Problems solved
+ #### Problems solved
  
- ### Future Goals
+ #### Future Goals
 
 ## About Us
 
