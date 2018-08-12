@@ -1,8 +1,19 @@
+/* ISSUE: i want footer to stay at bottom of page so you can scroll down to view it... NOT STICKY. STICKY makes it cover other content. */
+
+
+/* ALL ******************************** */
 * {
   /* border: 1px solid red; */
 }
 body, html {
   margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
 }
 .container {
   margin: 0;
@@ -10,58 +21,98 @@ body, html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
+
+/* HEADER ******************************** */
 .header {
   display: flex;
   background-image: url(http://writink.com/wp-content/uploads/2016/08/Fresh-Food.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .logo {
   width: 200px;
   height:200px;
   margin: 20px 35px;
 }
-h1 {
-  padding: 4em;
-  text-align: center;
-  color: white;
-}
-h2 {
-  color: #3a3a3a;
-  text-align: center;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
 
-}
+/* WELCOME MESSAGE *************************** */
 .welcome {
   align-items: center;
   justify-content: center;
   display: flex;
-  background-color: #ead33a;
+  background-color:#6a8742;
+}
+h2 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
+/* MAIN TABLE ******************************** */
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  color: #cfcfd1;
+}
+
+/* FOOTER ******************************** */
 .footer {
-  position: fixed;
+  position: absolute;
+  right: 0;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #5e424c;
+  background: #f4d611;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.devs {
+.footnotes {
   display: flex;
   flex-direction: column;
-  color: white;
   padding: 20px 40px;
 }
-.devs a {
+.footnotes a {
   text-decoration: none;
-  color: white;
+  color: #3a3a3a;
 }
-.devs a:hover{
-  color: #efecda;
+.footnotes a:hover{
+  color: #798e5c;
+}
+
+/* MEDIA QUERIES ******************************** */
+
+@media screen and (max-width: 480px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 250px;
+    height:250px;
+    margin: 20px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  .footer {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footnotes a {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 30px;
+  }
 }
