@@ -13,8 +13,6 @@ html {
 }
 body {
   min-height: 100%;
-  margin-bottom: 100px;
-  clear: both;
   position: relative;
 }
 .container {
@@ -23,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 
 /* HEADER ******************************** */
@@ -69,6 +66,8 @@ h3 {
 /* FOOTER ******************************** */
 .footer {
   position: absolute;
+  right: 0;
+  left: 0;
   bottom: 0;
   width: 100%;
   background: #f4d611;
