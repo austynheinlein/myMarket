@@ -25,7 +25,7 @@ class LocationsList extends React.Component {
                         </td>
 
                         <td>
-                          <button> Delete </button>
+                          <button onClick={() => this.props.deleteLocation(location, index)}> Delete </button>
                         </td>
                       </tr>
                     )

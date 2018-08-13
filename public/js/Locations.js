@@ -13,17 +13,34 @@ class Locations extends React.Component {
     this.getLocation = this.getLocation.bind(this)
     this.handleCreate = this.handleCreate.bind(this)
     this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
+    this.deleteLocation = this.deleteLocation.bind(this)
+    this.getLocation = this.getLocation.bind(this)
+  }
+
+  deleteLocation(location, index){
+    fetch('locations/' + location.id,
+    {
+      method: 'DELETE'
+    })
+    .then(data => {
+      this.setState({
+        locations: [
+          ...this.state.locations.slice(0, index),
+          ...this.state.locations.slice(index + 1)
+        ]
+      })
+    })
   }
 
   handleCreate(location){
-    console.log([location, ...this.state.locations]);
+    // console.log([location, ...this.state.locations]);
     this.setState({
       locations: [location, ...this.state.locations]
     });
   }
 
   handleCreateSubmit(location){
-    console.log(location);
+    // console.log(location);
     fetch('/locations', {
       body: JSON.stringify(location),
       method: 'POST',
@@ -79,6 +96,7 @@ class Locations extends React.Component {
             toggleState={this.toggleState}
             locations={this.state.locations}
             getLocation={this.getLocation}
+            deleteLocation={this.deleteLocation}
           />
           : ''
         }
