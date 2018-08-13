@@ -98,10 +98,11 @@ class Locations extends React.Component {
     }).catch(error=> console.log(error))
   }
 
-  toggleState (state1, state2) {
+  toggleState (state1, state2, state3) {
   this.setState({
     [state1]: !this.state[state1],
-    [state2]: !this.state[state2]
+    [state2]: !this.state[state2],
+    [state3]: !this.state[state3]
   })
 }
 
@@ -132,6 +133,7 @@ class Locations extends React.Component {
             toggleState={this.toggleState}
             location={this.state.location}
             handleSubmit={this.handleUpdateSubmit}
+            editLocationIsVisible={this.state.editLocationIsVisible}
           />
           : ''
         }
