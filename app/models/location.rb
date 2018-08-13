@@ -25,7 +25,8 @@ class Location
         "company_name" => result["company_name"],
         "address" => result["address"],
         "image" => result["image"],
-        "phone" => result["phone"]
+        "phone" => result["phone"],
+        "county" => result["county"]
       }
     end
   end
@@ -40,7 +41,8 @@ class Location
       "company_name" => result["company_name"],
       "address" => result["address"],
       "image" => result["image"],
-      "phone" => result["phone"]
+      "phone" => result["phone"],
+      "county" => result["county"]
     }
   end
 
@@ -48,9 +50,9 @@ class Location
   def self.create(opts)
     results = DB.exec(
       <<-SQL
-        INSERT INTO locations (company_name, address, image, phone)
-        VALUES ('#{opts["company_name"]}', '#{opts["address"]}', '#{opts["image"]}', '#{opts["phone"]}')
-        RETURNING id, company_name, address, image, phone;
+        INSERT INTO locations (company_name, address, image, phone, county)
+        VALUES ('#{opts["company_name"]}', '#{opts["address"]}', '#{opts["image"]}', '#{opts["phone"]}', '#{opts["county"]}')
+        RETURNING id, company_name, address, image, phone, county;
       SQL
     )
     result = results.first
@@ -59,7 +61,8 @@ class Location
       "company_name" => result["company_name"],
       "address" => result["address"],
       "image" => result["image"],
-      "phone" => result["phone"]
+      "phone" => result["phone"],
+      "county" => result["county"]
     }
   end
 
@@ -74,9 +77,9 @@ class Location
     results = DB.exec(
       <<-SQL
         UPDATE locations
-        SET company_name='#{opts["company_name"]}', address='#{opts["address"]}', image='#{opts["image"]}', phone='#{opts["phone"]}'
+        SET company_name='#{opts["company_name"]}', address='#{opts["address"]}', image='#{opts["image"]}', phone='#{opts["phone"]}', county='#{opts["county"]}'
         WHERE id=#{id}
-        RETURNING id, company_name, address, image, phone;
+        RETURNING id, company_name, address, image, phone, county;
       SQL
     )
     result = results.first
@@ -85,7 +88,8 @@ class Location
       "company_name" => result["company_name"],
       "address" => result["address"],
       "image" => result["image"],
-      "phone" => result["phone"]
+      "phone" => result["phone"],
+      "county" => result["county"]
     }
   end
 

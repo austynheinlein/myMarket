@@ -1,26 +1,35 @@
-class LocationList extends React.Component {
+class LocationsList extends React.Component {
   render () {
     return (
       <div className='locationsList'>
               <table>
                 <tbody>
-                    <tr>
-                      <td>
-                        <h3>7-Eleven</h3>
-                      </td>
+                  {this.props.locations.map( (location, index) => {
+                    return (
+                      <tr>
+                        <td>
+                          <img src={location.image} alt={location.company_name}
+                          onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}} />
+                        </td>
 
-                      <td>
-                        <h3>3456 Charles Street, Arcata CA </h3>
-                      </td>
+                        <td>
+                          <h3 onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}}>{location.company_name}</h3>
+                        </td>
 
-                      <td>
-                        <button>Edit</button>
-                      </td>
+                        <td>
+                          <h3>{location.address}</h3>
+                        </td>
 
-                      <td>
-                        <button> Delete </button>
-                      </td>
-                    </tr>
+                        <td>
+                          <button >Edit</button>
+                        </td>
+
+                        <td>
+                          <button onClick={() => this.props.deleteLocation(location, index)}> Delete </button>
+                        </td>
+                      </tr>
+                    )
+                  })}
               </tbody>
             </table>
           </div>
