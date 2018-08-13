@@ -1,0 +1,120 @@
+/* ISSUE: i want footer to stay at bottom of page so you can scroll down to view it... NOT STICKY. STICKY makes it cover other content. */
+
+
+/* ALL ******************************** */
+* {
+  /* border: 1px solid red; */
+}
+body, html {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* HEADER ******************************** */
+.header {
+  display: flex;
+  background-image: url(http://writink.com/wp-content/uploads/2016/08/Fresh-Food.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo {
+  width: 200px;
+  height:200px;
+  margin: 20px 35px;
+}
+
+/* WELCOME MESSAGE *************************** */
+.welcome {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color:#6a8742;
+  box-shadow: 3px 4px 6px #e2e2e2;
+}
+h2 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN TABLE ******************************** */
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  color: #cfcfd1;
+}
+
+/* FOOTER ******************************** */
+.footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f4d611;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 3px 3px 7px 5px #e2e2e2;
+}
+.footnotes {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.footnotes a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+.footnotes a:hover{
+  color: #798e5c;
+}
+
+/* MEDIA QUERIES ******************************** */
+
+@media screen and (max-width: 480px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 250px;
+    height:250px;
+    margin: 20px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  .footer {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footnotes a {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+}
