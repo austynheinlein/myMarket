@@ -6,11 +6,11 @@ class Location extends React.Component {
           <tbody>
             <tr>
               <td>
-              <img src='#'/>
+              <img src='https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/0015/3728/brand.gif?itok=oS9wBVLV'/>
               </td>
 
               <td>
-                Name: Raleys
+                Name: Raleys 
               </td>
 
               <td>

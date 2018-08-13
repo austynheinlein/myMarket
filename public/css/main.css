@@ -69,6 +69,12 @@ h3 {
   color: darkgrey;
 }
 
+/* LIST *********************************** */
+td {
+  margin: 3px;
+  padding: 5px;
+}
+
 /* FOOTER ******************************** */
 .footer {
   position: absolute;
