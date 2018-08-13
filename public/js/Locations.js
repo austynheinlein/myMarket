@@ -6,9 +6,18 @@ class Locations extends React.Component {
       addLocationIsVisible: false,
       locationIsVisible: false,
       editLocationIsVisible: false,
-      locations: []
+      locations: [],
+      location: {}
     }
     this.toggleState = this.toggleState.bind(this)
+    this.getLocation = this.getLocation.bind(this)
+
+  }
+
+  getLocation(location){
+    this.setState({
+      location: location
+    })
   }
 
   componentDidMount(){
@@ -38,7 +47,11 @@ class Locations extends React.Component {
         <h3> locations </h3>
         <button onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
         {this.state.locationsListIsVisible ?
-          <LocationsList toggleState={this.toggleState} locations={this.state.locations}/>
+          <LocationsList
+            toggleState={this.toggleState}
+            locations={this.state.locations}
+            getLocation={this.getLocation}
+          />
           : ''
         }
         {this.state.addLocationIsVisible ?
@@ -46,7 +59,10 @@ class Locations extends React.Component {
           : ''
         }
         {this.state.locationIsVisible ?
-          <Location toggleState={this.toggleState}/>
+          <Location
+            toggleState={this.toggleState}
+            location={this.state.location}
+          />
           : ''
         }
       </div>

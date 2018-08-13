@@ -8,11 +8,12 @@ class LocationsList extends React.Component {
                     return (
                       <tr>
                         <td>
-                          <img src={location.image} alt={location.company_name} onClick={()=>this.props.toggleState('locationsListIsVisible', 'locationIsVisible')} />
+                          <img src={location.image} alt={location.company_name}
+                          onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}} />
                         </td>
 
                         <td>
-                          <h3>{location.company_name}</h3>
+                          <h3 onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}}>{location.company_name}</h3>
                         </td>
 
                         <td>
