@@ -23,7 +23,7 @@ class Locations extends React.Component {
         <h3> locations </h3>
         <button onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
         {this.state.locationsListIsVisible ?
-          <LocationsList />
+          <LocationsList toggleState={this.toggleState}/>
           : ''
         }
         {this.state.addLocationIsVisible ?
@@ -31,7 +31,7 @@ class Locations extends React.Component {
           : ''
         }
         {this.state.locationIsVisible ?
-          <Location />
+          <Location toggleState={this.toggleState}/>
           : ''
         }
       </div>

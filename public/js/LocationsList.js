@@ -6,6 +6,10 @@ class LocationsList extends React.Component {
                 <tbody>
                     <tr>
                       <td>
+                        <h3 onClick={()=>this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}>LOGO</h3>
+                      </td>
+
+                      <td>
                         <h3>7-Eleven</h3>
                       </td>
 
