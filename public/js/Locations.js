@@ -2,8 +2,9 @@ class Locations extends React.Component {
   render() {
     return (
       <div className='locations'>
-        <h2> Places That Accept EBT </h2>
-
+        <Location />
+        <LocationList />
+        <LocationForm />
       </div>
     )
   }
@@ -11,6 +12,6 @@ class Locations extends React.Component {
 
 
 ReactDOM.render(
-    <Locations />
+    <Locations />,
   document.querySelector('main')
 )
