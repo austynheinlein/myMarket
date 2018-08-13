@@ -11,7 +11,35 @@ class Locations extends React.Component {
     }
     this.toggleState = this.toggleState.bind(this)
     this.getLocation = this.getLocation.bind(this)
+    this.handleCreate = this.handleCreate.bind(this)
+    this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
+  }
 
+  handleCreate(location){
+    console.log([location, ...this.state.locations]);
+    this.setState({
+      locations: [location, ...this.state.locations]
+    });
+  }
+
+  handleCreateSubmit(location){
+    console.log(location);
+    fetch('/locations', {
+      body: JSON.stringify(location),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(createdLocation => {
+      return createdLocation.json()
+    })
+    .then(jsonedLocation => {
+      this.handleCreate(jsonedLocation)
+      this.toggleState('addLocationIsVisible', 'locationsListIsVisible')
+    })
+    .catch(error => console.log(error))
   }
 
   getLocation(location){
@@ -55,7 +83,11 @@ class Locations extends React.Component {
           : ''
         }
         {this.state.addLocationIsVisible ?
-          <LocationForm toggleState={this.toggleState}/>
+          <LocationForm
+            toggleState={this.toggleState}
+            handleCreate={this.handleCreate}
+            handleSubmit={this.handleCreateSubmit}
+          />
           : ''
         }
         {this.state.locationIsVisible ?
