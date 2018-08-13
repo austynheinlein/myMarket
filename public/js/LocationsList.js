@@ -4,27 +4,31 @@ class LocationsList extends React.Component {
       <div className='locationsList'>
               <table>
                 <tbody>
-                    <tr>
-                      <td>
-                        <h3 onClick={()=>this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}>LOGO</h3>
-                      </td>
+                  {this.props.locations.map( (location, index) => {
+                    return (
+                      <tr>
+                        <td>
+                          <img src={location.image} alt={location.company_name} onClick={()=>this.props.toggleState('locationsListIsVisible', 'locationIsVisible')} />
+                        </td>
 
-                      <td>
-                        <h3>7-Eleven</h3>
-                      </td>
+                        <td>
+                          <h3>{location.company_name}</h3>
+                        </td>
 
-                      <td>
-                        <h3>3456 Charles Street, Arcata CA </h3>
-                      </td>
+                        <td>
+                          <h3>{location.address}</h3>
+                        </td>
 
-                      <td>
-                        <button>Edit</button>
-                      </td>
+                        <td>
+                          <button>Edit</button>
+                        </td>
 
-                      <td>
-                        <button> Delete </button>
-                      </td>
-                    </tr>
+                        <td>
+                          <button> Delete </button>
+                        </td>
+                      </tr>
+                    )
+                  })}
               </tbody>
             </table>
           </div>

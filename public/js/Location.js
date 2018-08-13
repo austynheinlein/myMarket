@@ -11,7 +11,6 @@ class Location extends React.Component {
 
               <p> Phone: 452-452-2521</p>
           </div>
-        <LocationForm />
       </div>
     )
   }
