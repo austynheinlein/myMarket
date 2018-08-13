@@ -15,6 +15,7 @@ class LocationForm extends React.Component {
           <label className='label' for='image'> Image </label>
           <input className='input' type='text' id='image'/>
           <br/>
+          <input type="submit" value="Submit" />
         </form>
           <button className='cancel'> Cancel </button>
       </div>
