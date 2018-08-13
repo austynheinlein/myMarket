@@ -108,8 +108,8 @@ class Locations extends React.Component {
   render() {
     return (
       <div className='locations'>
-        <h3> locations </h3>
-        <button onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
+        <h3 className='local'> Locations </h3>
+        <button className='addbtn' onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
         {this.state.locationsListIsVisible ?
           <LocationsList
             toggleState={this.toggleState}

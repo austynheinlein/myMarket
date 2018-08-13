@@ -55,6 +55,9 @@ h2 {
 }
 
 /* MAIN TABLE ******************************** */
+div.app {
+  width: 100%;
+}
 main{
   display: flex;
   align-items: center;
@@ -62,18 +65,40 @@ main{
   /* height: 100vh; */
 }
 h3 {
-  color: #cfcfd1;
+  color: #3a3a3a;
+  font-size: 15px;
 }
+.local{
+  text-align: center;
+  font-size: 30px;
+}
+.addbtn {
+  background: white;
+  padding: 5px;
+  border: 2px solid #3a3a3a;
+}
+.addbtn:hover {
+  cursor: pointer;
+  border: 2px solid #6a8742;
+  color: #6a8742;
+}
+
 
 /* FORM *********************************** */
 .label {
   color: darkgrey;
 }
-
+img {
+  height: 90px;
+  width: auto;
+}
 /* LIST *********************************** */
 td {
   margin: 3px;
   padding: 5px;
+}
+.locationsList {
+  border: 1px solid red;
 }
 
 /* FOOTER ******************************** */
