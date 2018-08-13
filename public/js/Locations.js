@@ -110,7 +110,9 @@ class Locations extends React.Component {
     return (
       <div className='locations'>
         <h3 className='local'> Locations </h3>
-        <button className='addbtn' onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
+        <div className='addlocalbtn'>
+          <button className='addbtn' onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
+        </div>
         {this.state.locationsListIsVisible ?
           <LocationsList
             toggleState={this.toggleState}
