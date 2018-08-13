@@ -21,7 +21,7 @@ class LocationsList extends React.Component {
                         </td>
 
                         <td>
-                          <button >Edit</button>
+                        <button onClick={() =>{this.props.getLocation(location); this.props.toggleState('locationIsVisible', 'locationsListIsVisible', 'editLocationIsVisible')}}>Edit</button>
                         </td>
 
                         <td>
@@ -32,6 +32,8 @@ class LocationsList extends React.Component {
                   })}
               </tbody>
             </table>
+
+
           </div>
     )
   }
