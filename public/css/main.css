@@ -64,6 +64,11 @@ h3 {
   color: #cfcfd1;
 }
 
+/* FORM *********************************** */
+.label {
+  color: darkgrey;
+}
+
 /* FOOTER ******************************** */
 .footer {
   position: absolute;
