@@ -13,6 +13,19 @@ class LocationForm extends React.Component {
 
   }
 
+  componentDidMount(){
+    if(this.props.location){
+      this.setState({
+        company_name: this.props.location.company_name,
+        address: this.props.location.address,
+        image: this.props.location.image,
+        phone: this.props.location.phone,
+        county: this.props.location.county,
+        id: this.props.location.id
+      })
+    }
+  }
+
   handleChange (event) {
     this.setState({
       [event.target.id]: event.target.value

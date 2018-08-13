@@ -14,7 +14,26 @@ class Locations extends React.Component {
     this.handleCreate = this.handleCreate.bind(this)
     this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
     this.deleteLocation = this.deleteLocation.bind(this)
-    this.getLocation = this.getLocation.bind(this)
+    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
+  }
+
+  handleUpdateSubmit(location){
+    fetch('/locations/' + location.id, {
+      body: JSON.stringify(location),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(updatedLocation => {
+      return updatedLocation.json()
+    })
+    .then(jsonedLocation => {
+      this.getLocations()
+      this.toggleState('locationsListIsVisible', 'locationIsVisible')
+    })
+    .catch(error => console.log(error))
   }
 
   deleteLocation(location, index){
@@ -112,6 +131,7 @@ class Locations extends React.Component {
           <Location
             toggleState={this.toggleState}
             location={this.state.location}
+            handleSubmit={this.handleUpdateSubmit}
           />
           : ''
         }

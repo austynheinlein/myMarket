@@ -11,6 +11,7 @@ class Location extends React.Component {
 
               <p> Phone: {this.props.location.phone}</p>
           </div>
+          <LocationForm location={this.props.location} handleSubmit={this.props.handleSubmit}/>
       </div>
     )
   }

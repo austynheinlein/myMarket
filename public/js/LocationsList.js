@@ -21,7 +21,7 @@ class LocationsList extends React.Component {
                         </td>
 
                         <td>
-                          <button>Edit</button>
+                          <button >Edit</button>
                         </td>
 
                         <td>
