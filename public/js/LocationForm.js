@@ -68,7 +68,12 @@ class LocationForm extends React.Component {
           <br/>
           <input type="submit" value="Submit" />
         </form>
+          {this.props.editLocationIsVisible ?
+          <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'locationIsVisible', 'editLocationIsVisible')}> Cancel </button>
+            :
           <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'addLocationIsVisible')}> Cancel </button>
+          }
+
       </div>
     )
   }
