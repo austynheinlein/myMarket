@@ -10,8 +10,12 @@ class Location extends React.Component {
               <p> Address: {this.props.location.address}</p>
 
               <p> Phone: {this.props.location.phone}</p>
-          </div>
-          <LocationForm location={this.props.location} handleSubmit={this.props.handleSubmit}/>
+        </div>
+        {this.props.editLocationIsVisible ?
+          <LocationForm location={this.props.location} handleSubmit={this.props.handleSubmit} editLocationIsVisible={this.props.editLocationIsVisible} toggleState={this.props.toggleState}/>
+          : ''
+        }
+
       </div>
     )
   }
