@@ -1,4 +1,4 @@
-class LocationList extends React.Component {
+class LocationsList extends React.Component {
   render () {
     return (
       <div className='locationsList'>

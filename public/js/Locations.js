@@ -4,7 +4,7 @@ class Locations extends React.Component {
     this.state = {
       locationsListIsVisible: true,
       addLocationIsVisible: false,
-      addLocationIsVisible: false,
+      locationIsVisible: false,
       editLocationIsVisible: false
     }
     this.toggleState = this.toggleState.bind(this)
@@ -19,8 +19,18 @@ class Locations extends React.Component {
       <div className='locations'>
         <h3> locations </h3>
         <button onClick={()=>this.toggleState('addLocationIsVisible')}>Add a Location</button>
-        {this.state.addLocationIsVisible ? <LocationForm /> : ''}
-        <Location />
+        {this.state.locationsListIsVisible ?
+          <LocationsList />
+          : ''
+        }
+        {this.state.addLocationIsVisible ?
+          <LocationForm />
+          : ''
+        }
+        {this.state.locationIsVisible ?
+          <Location />
+          : ''
+        }
       </div>
     )
   }
