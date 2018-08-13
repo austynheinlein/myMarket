@@ -43,6 +43,7 @@ body {
   justify-content: center;
   display: flex;
   background-color:#6a8742;
+  box-shadow: 3px 4px 6px #e2e2e2;
 }
 h2 {
   color: white;
@@ -74,6 +75,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 3px 3px 7px 5px #e2e2e2;
 }
 .footnotes {
   display: flex;
