@@ -25,6 +25,8 @@ class LocationsList extends React.Component {
           type="text"
           value={this.state.search}
           onChange={this.updateSearch}
+          className="search_filter"
+          placeholder="Search..."
         />
           <table>
             <tbody>
