@@ -16,7 +16,7 @@ class LocationsList extends React.Component {
   render () {
     let filteredLocations = this.props.locations.filter(
       (location)=> {
-        return location.address.indexOf(this.state.search) !== -1 || location.company_name.indexOf(this.state.search) !== -1;
+        return location.address.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || location.company_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     );
     return (
