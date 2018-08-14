@@ -59,7 +59,7 @@ class Locations extends React.Component {
   }
 
   handleCreateSubmit(location){
-    // console.log(location);
+    console.log(location);
     fetch('/locations', {
       body: JSON.stringify(location),
       method: 'POST',
@@ -109,8 +109,10 @@ class Locations extends React.Component {
   render() {
     return (
       <div className='locations'>
-        <h3> locations </h3>
-        <button onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
+        <h3 className='local'> Locations </h3>
+        <div className='addlocalbtn'>
+          <button className='addbtn' onClick={()=>this.toggleState('addLocationIsVisible', 'locationsListIsVisible')}>Add a Location</button>
+        </div>
         {this.state.locationsListIsVisible ?
           <LocationsList
             toggleState={this.toggleState}
