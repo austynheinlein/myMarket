@@ -59,7 +59,7 @@ class Locations extends React.Component {
   }
 
   handleCreateSubmit(location){
-    // console.log(location);
+    console.log(location);
     fetch('/locations', {
       body: JSON.stringify(location),
       method: 'POST',

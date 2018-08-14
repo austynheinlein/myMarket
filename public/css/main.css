@@ -60,6 +60,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 }
 .local{
   text-align: center;
@@ -190,6 +191,8 @@ tr h3 {
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 3px 3px 7px 5px #e2e2e2;
+  margin-top: 20px;
+  max-height: 150px;
 }
 .footnotes {
   display: flex;
@@ -235,10 +238,16 @@ tr h3 {
 
 
 /* LOCATIONFORM.JS ******************************** */
+
 form.pure-form.pure-form-aligned {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  margin-top: 50px;
+}
+.pure-control-group {
+  margin-right: 50px;
 }
 .individual{
   display: flex;
@@ -290,19 +299,14 @@ form.pure-form.pure-form-aligned {
   padding: 5px;
   margin: 5px;
   height: 40px;
+  margin-right: 159px;
 }
 .pure-controls input[type=submit]:hover {
   background: #84698c;
 }
 
 /* LOCATION.JS ******************************** */
-
-.show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.show button {
+.fullList {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,4 +314,5 @@ form.pure-form.pure-form-aligned {
   color: white;
   border: none;
   padding: 10px;
+  margin: auto;
 }
