@@ -6,15 +6,17 @@ class LocationsList extends React.Component {
             <tbody>
               {this.props.locations.map( (location, index) => {
                 return (
+                <div className='listitem'>
                   <tr>
                     <div className='bizinfo'>
-                        <td>
-                          <img src={location.image} alt={location.company_name}
+                        <td className='imgsize'>
+                          <img className='bizimg' src={location.image} alt={location.company_name}
                           onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}} />
                         </td>
+
                       <div className='address'>
                         <td>
-                          <h3 onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}}>{location.company_name}</h3>
+                          <h3 className='name' onClick={()=> {this.props.getLocation(location); this.props.toggleState('locationsListIsVisible', 'locationIsVisible')}}>{location.company_name}</h3>
                         </td>
 
                         <td>
@@ -34,6 +36,7 @@ class LocationsList extends React.Component {
                       </td>
                     </div>
                   </tr>
+                </div>
                 )
               })}
           </tbody>
