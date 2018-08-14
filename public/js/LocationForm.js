@@ -41,38 +41,60 @@ class LocationForm extends React.Component {
   render () {
     return (
       <div className='form'>
-        <form onSubmit={this.handleSubmit}>
-          <label className='label' for='company_name'> Name </label>
-          <input className='input' type='text' id='company_name'
-            onChange={this.handleChange}
-            value={this.state.company_name}
-          />
+        <form className='pure-form pure-form-aligned' onSubmit={this.handleSubmit}>
+
+            <div className='pure-control-group'>
+                <label className='label' for='company_name'> Name </label>
+                <input className='input' type='text' id='company_name'
+                  onChange={this.handleChange}
+                  value={this.state.company_name}
+                />
+            </div>
+
           <br/>
-          <label className='label' for='address'> Address </label>
-          <input className='input' type='text' id='address'
-            onChange={this.handleChange}
-            value={this.state.address}
-          />
+
+            <div className='pure-control-group'>
+                <label className='label' for='address'> Address </label>
+                <input className='input' type='text' id='address'
+                  onChange={this.handleChange}
+                  value={this.state.address}
+                />
+            </div>
+
           <br/>
-          <label className='label' for='phone'> Phone </label>
-          <input className='input' type='text' id='phone'
-            onChange={this.handleChange}
-            value={this.state.phone}
-          />
+
+            <div className='pure-control-group'>
+                <label className='label' for='phone'> Phone </label>
+                <input className='input' type='text' id='phone'
+                  onChange={this.handleChange}
+                  value={this.state.phone}
+                />
+            </div>
+
           <br/>
-          <label className='label' for='image'> Image </label>
-          <input className='input' type='text' id='image'
-            onChange={this.handleChange}
-            value={this.state.image}
-          />
+
+            <div className='pure-control-group'>
+                <label className='label' for='image'> Image </label>
+                <input className='input' type='text' id='image'
+                  onChange={this.handleChange}
+                  value={this.state.image}
+                />
+            </div>
+
           <br/>
-          <input type="submit" value="Submit" />
+
+            <div className='pure-controls'>
+              <input type="submit" value="Submit" />
+            </div>
+
         </form>
-          {this.props.editLocationIsVisible ?
-          <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'locationIsVisible', 'editLocationIsVisible')}> Cancel </button>
-            :
-          <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'addLocationIsVisible')}> Cancel </button>
-          }
+            <div className='cancelbtn'>
+              {this.props.editLocationIsVisible ?
+              <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'locationIsVisible', 'editLocationIsVisible')}> Cancel </button>
+                :
+              <button className='cancel' onClick={()=> this.props.toggleState('locationsListIsVisible', 'addLocationIsVisible')}> Cancel </button>
+              }
+            </div>
 
       </div>
     )

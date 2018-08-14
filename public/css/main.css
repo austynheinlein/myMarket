@@ -232,3 +232,82 @@ tr h3 {
     font-size: 30px;
   }
 }
+
+
+/* LOCATIONFORM.JS ******************************** */
+form.pure-form.pure-form-aligned {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.individual{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 25px;
+  justify-content: space-between;
+  background: #f3f4ef;
+  min-height: 110px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.individual img {
+  margin: 5px;
+  max-height: 90px;
+  max-width: 120px;
+
+}
+.individual p {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  margin: 20px;
+}
+.cancelbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cancel {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  background: #798e5c;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+.cancel:hover{
+  background: #99b76f;
+}
+.pure-controls input[type=submit] {
+  width: 90px;
+  background: #5c4d60;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  height: 40px;
+}
+.pure-controls input[type=submit]:hover {
+  background: #84698c;
+}
+
+/* LOCATION.JS ******************************** */
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5c4d60;
+  color: white;
+  border: none;
+  padding: 10px;
+}
