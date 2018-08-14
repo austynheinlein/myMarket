@@ -1,10 +1,34 @@
 class LocationsList extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      search: ''
+    };
+    this.updateSearch = this.updateSearch.bind(this)
+  }
+
+  updateSearch(event){
+    this.setState({
+      search: event.target.value
+    })
+  }
+
   render () {
+    let filteredLocations = this.props.locations.filter(
+      (location)=> {
+        return location.address.indexOf(this.state.search) !== -1 || location.company_name.indexOf(this.state.search) !== -1;
+      }
+    );
     return (
       <div className='locationsList'>
+        <input
+          type="text"
+          value={this.state.search}
+          onChange={this.updateSearch}
+        />
           <table>
             <tbody>
-              {this.props.locations.map( (location, index) => {
+              {filteredLocations.map( (location, index) => {
                 return (
                 <div className='listitem'>
                   <tr>
@@ -42,8 +66,7 @@ class LocationsList extends React.Component {
           </tbody>
         </table>
 
-
-          </div>
+      </div>
     )
   }
 }
