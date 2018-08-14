@@ -1,5 +1,3 @@
-/* ISSUE: i want footer to stay at bottom of page so you can scroll down to view it... NOT STICKY. STICKY makes it cover other content. */
-
 
 /* ALL ******************************** */
 * {
@@ -55,16 +53,132 @@ h2 {
 }
 
 /* MAIN TABLE ******************************** */
+div.app {
+  width: 100%;
+}
 main{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-bottom: 150px;
 }
-h3 {
-  color: #cfcfd1;
+.local{
+  text-align: center;
+  font-size: 30px;
+  margin: 25px;
+  color: #5c4d60;
+}
+.addlocalbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
+.addbtn {
+  background: #5c4d60;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+.addbtn:hover {
+  cursor: pointer;
+  background: #84698c;
+}
+
+
+/* FORM *********************************** */
+.label {
+  color: darkgrey;
+}
+
+/* LIST *********************************** */
+.locationsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.listitem{
+  background: #f3f4ef
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4ef;
+  margin: 10px 25px;
+  min-height: 110px;
+}
+.imgsize {
+  height: 100px;
+  width: 130px;
+}
+.bizimg {
+  margin: 5px;
+  max-height: 90px;
+  max-width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.bizimg:hover{
+  cursor: pointer;
+}
+.bizinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+}
+.name {
+  font-weight: bold;
+}
+.name:hover {
+  cursor: pointer;
+  color: #6a8742;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+.address h3 {
+  color: #3a3a3a;
+  font-size: 18px;
+  margin: 2px 5px;
+  display: flex;
+  text-align: left;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+.edit, .delete {
+  margin: 5px;
+  padding: 8px;
+  width: 55px;
+  text-align: center;
+  border: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.edit {
+  background: #6a8742;
+}
+.edit:hover{
+  background: #99b76f;
+}
+.delete {
+  background: #5c4d60;
+}
+.delete:hover{
+  background: #84698c;
+}
+tr h3 {
+  text-align: center;
+}
 /* FOOTER ******************************** */
 .footer {
   position: absolute;
@@ -77,6 +191,8 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 3px 3px 7px 5px #e2e2e2;
+  margin-top: 20px;
+  max-height: 150px;
 }
 .footnotes {
   display: flex;
@@ -118,4 +234,85 @@ h3 {
   h4 {
     font-size: 30px;
   }
+}
+
+
+/* LOCATIONFORM.JS ******************************** */
+
+form.pure-form.pure-form-aligned {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.pure-control-group {
+  margin-right: 50px;
+}
+.individual{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 25px;
+  justify-content: space-between;
+  background: #f3f4ef;
+  min-height: 110px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.individual img {
+  margin: 5px;
+  max-height: 90px;
+  max-width: 120px;
+
+}
+.individual p {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  margin: 20px;
+}
+.cancelbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cancel {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  background: #798e5c;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+.cancel:hover{
+  background: #99b76f;
+}
+.pure-controls input[type=submit] {
+  width: 90px;
+  background: #5c4d60;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  height: 40px;
+  margin-right: 159px;
+}
+.pure-controls input[type=submit]:hover {
+  background: #84698c;
+}
+
+/* LOCATION.JS ******************************** */
+.fullList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5c4d60;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: auto;
 }
