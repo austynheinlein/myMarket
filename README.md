@@ -12,13 +12,12 @@
  - React front-end framework
  - Heroku deployment
  
- #### Problems solved
- 
  #### Future Goals
+ In the future we would like to add more functionality to the map feature. We would like to program the map on the home page to show all the locations added to the database. In each locaiton show page, we would like a static map feature where users can see where that specific location s. 
 
 ## About Us
 
 We are group of General Assembly's Web Development Immersion students
-  - Sean Briar
-  - Kate Weingart
-  - Austyn Heinlein
+  - [Sean Briar](https://github.com/SeanBriar) 
+  - [Kate Weingart](https://github.com/kweingart08)
+  - [Austyn Heinlein](https://github.com/austynheinlein)
