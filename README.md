@@ -3,6 +3,8 @@
 ## About the App 
  myMarkets is a place where users can keep track of local businesses that accept EBT. A user can add, edit, delete, and list any location they would like to the directory. 
  
+ Check it out here: https://my-markets.herokuapp.com/
+ 
  #### Technologies Used
  This app was created using: 
  - Ruby on Rails 
